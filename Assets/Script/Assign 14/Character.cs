@@ -14,7 +14,7 @@ public class Character
   public int Health
   {
     get { return health; }
-    set { health = value; }
+    protected set { health = value; }
   }
   public Character(string name, int health)
   {
