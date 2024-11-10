@@ -5,7 +5,7 @@ using UnityEngine;
 public class Character
 {
   public string name;
-  private int health;
+  protected int health;
   public string Name
   {
     get { return name; }
