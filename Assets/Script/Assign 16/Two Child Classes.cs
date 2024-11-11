@@ -5,44 +5,25 @@ using UnityEngine;
 namespace Assignment18
 {
 
-    public class TwoChildClasses : Character
+
+    public class Soldier : Character
     {
-        public class Soldier : Character
+        public Soldier(string name, int health, Position position) : base(name, health, position) { }
+        public override void DisplayInfo()
         {
-            public Soldier(string name, int health, Position position) : base(name, health, position) { }
-            public override void DisplayInfo()
-            {
-                Debug.Log("Soldier");
-                base.DisplayInfo();
-            }
-
-        }
-        public class Officer : Character
-        {
-            public Officer(string name, int health, Position position) : base(name, health, position) { }
-            public override void DisplayInfo()
-            {
-                Debug.Log("Officer");
-                base.DisplayInfo();
-            }
+            Debug.Log("Soldier");
+            base.DisplayInfo();
         }
 
-
-
-
-
-
-
-        // Start is called before the first frame update
-        void Start()
+    }
+    public class Officer : Character
+    {
+        public Officer(string name, int health, Position position) : base(name, health, position) { }
+        public override void DisplayInfo()
         {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            Debug.Log("Officer");
+            base.DisplayInfo();
         }
     }
+
 }

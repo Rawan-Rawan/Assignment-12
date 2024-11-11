@@ -8,9 +8,9 @@ namespace Assignment18
     public class Character
     {
         public string name;
-        private int health;
+        public int health;
         protected Position position;
-        private int Health
+        public int Health
         {
             get { return health; }
             set
@@ -41,12 +41,13 @@ namespace Assignment18
         }
         public void Attack(int damage, Character target)
         {
+
             Attack(damage, target, "kicking");
 
         }
         public void Attack(int damage, Character target, string attackType)
         {
-
+            target.health -= damage;
         }
 
 
